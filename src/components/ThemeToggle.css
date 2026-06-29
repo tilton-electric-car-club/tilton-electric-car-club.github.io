@@ -4,18 +4,18 @@
   justify-content: center;
   width: 36px;
   height: 36px;
-  min-height: 44px; /* WCAG 2.2 target size via padding expansion */
+  min-height: 44px;
   padding: 0.25rem;
   background: none;
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(255,255,255,0.35);
   border-radius: 6px;
   cursor: pointer;
-  color: var(--color-text-secondary);
+  color: rgba(255,255,255,0.82);
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 
 .theme-toggle:hover {
-  background: var(--color-surface);
-  color: var(--color-text);
-  border-color: var(--color-border);
+  background: rgba(255,255,255,0.12);
+  color: var(--white);
+  border-color: rgba(255,255,255,0.6);
 }
