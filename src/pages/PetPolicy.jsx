@@ -21,7 +21,7 @@ export default function PetPolicy() {
 
       <div className="card">
         <h2>Insurance Requirements</h2>
-        <div className="callout">
+        <div className="callout callout--warning">
           <p>
             <strong>Highway Code — Rule 57:</strong> "When in a vehicle make sure
             dogs or other animals are suitably restrained so they cannot distract

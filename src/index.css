@@ -211,6 +211,12 @@ body {
   border-radius: 4px;
 }
 
+/* On dark-green surfaces (navbar, hero) sky-600 is ~1.45:1 — switch to white */
+.navbar :focus-visible,
+.hero :focus-visible {
+  outline-color: white;
+}
+
 /* Links */
 a {
   color: var(--color-link);
@@ -363,6 +369,11 @@ img { max-width: 100%; height: auto; }
   border: 1px solid var(--color-border);
   padding: 1.75rem;
   margin-bottom: 1.25rem;
+}
+
+/* Offset hash-anchor scroll so the sticky navbar (56px) doesn't cover the heading */
+.card[id] {
+  scroll-margin-top: 72px;
 }
 
 /* ── Hero ─────────────────────────────────────────────────────────────────────── */
@@ -619,7 +630,14 @@ img { max-width: 100%; height: auto; }
   color: var(--color-text-secondary);
   font-size: 1rem;
 }
-.callout strong { color: var(--color-sky-hover); font-weight: 600; }
+.callout strong { color: var(--color-text); font-weight: 600; }
+
+/* Warning / safety callout variant — for legal or safety-critical content */
+.callout--warning {
+  background-color: rgba(249, 115, 22, 0.08);
+  border-left-color: rgb(234, 88, 12);
+}
+.callout--warning strong { color: #92400E; }
 
 /* ── Schedule list ───────────────────────────────────────────────────────────────── */
 .schedule-list {
@@ -638,7 +656,8 @@ img { max-width: 100%; height: auto; }
 
 .schedule-time {
   font-weight: 600;
-  color: var(--color-forest);
+  /* --color-sky passes WCAG AA in both light (sky-600 on white ≈4.7:1) and dark (sky-400 on dark surface ≈5.3:1) */
+  color: var(--color-sky);
   min-width: 120px;
   flex-shrink: 0;
   font-size: 0.9375rem;

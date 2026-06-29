@@ -55,18 +55,9 @@
   width: auto;
 }
 
-/* Force the light logo on the dark navbar in both light and dark themes */
-.logo-dark  { display: none; }
-.logo-light { display: block; }
-
-/* Override: if the page body is in dark mode we still want the light logo
-   because the navbar is always forest-green */
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) .logo-dark  { display: none; }
-  :root:not(.light) .logo-light { display: block; }
-}
-:root.dark .logo-dark  { display: none; }
-:root.dark .logo-light { display: block; }
+/* Navbar is always forest-green — always show the white/light-on-dark logo variant */
+.logo-light { display: none; }
+.logo-dark  { display: block; }
 
 .navbar-right {
   display: flex;
@@ -147,7 +138,7 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 56px;
+    top: 100%;
     left: 0;
     right: 0;
     background: var(--color-forest);

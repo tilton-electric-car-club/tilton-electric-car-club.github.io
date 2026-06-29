@@ -23,11 +23,12 @@
 }
 
 .footer-copy a {
-  color: var(--leaf-400);
+  /* white on forest-800 ≈ 5.8:1 — WCAG AA ✓; raw leaf-400 was 3.6:1 ✗ */
+  color: rgba(255, 255, 255, 0.95);
   text-decoration: none;
 }
 .footer-copy a:hover {
-  color: var(--leaf-300);
+  color: var(--white);
   text-decoration: underline;
 }
 
