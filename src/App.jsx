@@ -1,0 +1,33 @@
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
+import Layout from './components/Layout'
+import Home from './pages/Home'
+import NeedALift from './pages/NeedALift'
+import MonthlyMeetings from './pages/MonthlyMeetings'
+import PetPolicy from './pages/PetPolicy'
+import Privacy from './pages/Privacy'
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
+
+export default function App() {
+  return (
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="need-a-lift" element={<NeedALift />} />
+          <Route path="monthly-meetings" element={<MonthlyMeetings />} />
+          <Route path="pet-policy" element={<PetPolicy />} />
+          <Route path="privacy" element={<Privacy />} />
+        </Route>
+      </Routes>
+    </>
+  )
+}

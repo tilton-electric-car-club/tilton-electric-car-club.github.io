@@ -1,0 +1,508 @@
+/* Global Styles — matching tiltonelectriccarclub.com Filament theme
+   Supports both light and dark modes via:
+     • prefers-color-scheme (OS default, overrideable)
+     • :root.dark / :root.light  (manual toggle — wins on specificity 0,1,1)
+*/
+
+/* ── Raw palette ─────────────────────────────────────────────────────────────
+   Theme-independent; verified to match the demo's inline Filament palette.
+   Do not use these directly in component rules — use semantic tokens below.
+   ─────────────────────────────────────────────────────────────────────────── */
+:root {
+  --color-primary-50:  rgb(250, 252, 245);
+  --color-primary-100: rgb(245, 250, 235);
+  --color-primary-200: rgb(230, 242, 206);
+  --color-primary-300: rgb(214, 234, 177);
+  --color-primary-400: rgb(184, 218, 118);
+  --color-primary-500: rgb(153, 202,  59);
+  --color-primary-600: rgb(138, 182,  53);
+  --color-primary-700: rgb(115, 152,  44);
+  --color-primary-800: rgb( 92, 121,  35);   /* white on this: ~5.0:1 — passes WCAG AA */
+  --color-primary-900: rgb( 75,  99,  29);   /* white on this: ~6.8:1 — passes WCAG AA/AAA */
+  --color-primary-950: rgb( 46,  61,  18);
+  --color-primary:       #72952a;
+  --color-primary-hover: rgb( 92, 121,  35);
+  --color-primary-light: rgb(245, 250, 235);
+
+  --color-gray-50:  rgb(249, 250, 251);
+  --color-gray-100: rgb(243, 244, 246);
+  --color-gray-200: rgb(229, 231, 235);
+  --color-gray-300: rgb(209, 213, 219);
+  --color-gray-400: rgb(156, 163, 175);
+  --color-gray-500: rgb(107, 114, 128);
+  --color-gray-600: rgb( 75,  85,  99);
+  --color-gray-700: rgb( 55,  65,  81);
+  --color-gray-800: rgb( 31,  41,  55);
+  --color-gray-900: rgb( 17,  24,  39);
+  --color-gray-950: rgb(  3,   7,  18);
+
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --max-width: 900px;
+  --radius: 8px;
+}
+
+/* ── Semantic tokens — LIGHT defaults ────────────────────────────────────────
+   These are the only tokens component rules should reference.
+   ─────────────────────────────────────────────────────────────────────────── */
+:root {
+  --color-bg:             var(--color-gray-50);
+  --color-text:           var(--color-gray-950);
+  --color-text-secondary: var(--color-gray-600);
+  --color-surface:        #ffffff;                       /* cards */
+  --color-surface-alt:    var(--color-gray-100);         /* hero, features, table headers, navbar, footer */
+  --color-border:         var(--color-gray-200);
+  --color-accent:         var(--color-primary-700);      /* links, active nav, schedule time — readable on white */
+  --color-accent-hover:   var(--color-primary-800);
+  --color-shadow:         rgba(0, 0, 0, 0.08);
+}
+
+/* ── Dark tokens — applied via OS preference (when user hasn't forced light) ─ */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --color-bg:             var(--color-gray-950);
+    --color-text:           #ffffff;
+    --color-text-secondary: var(--color-gray-400);
+    --color-surface:        var(--color-gray-800);
+    --color-surface-alt:    var(--color-gray-800);
+    --color-border:         var(--color-gray-700);
+    --color-accent:         var(--color-primary-400);
+    --color-accent-hover:   var(--color-primary-300);
+    --color-shadow:         rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* ── Dark tokens — applied via manual toggle (wins over OS, same values) ─────
+   Keep this block in sync with the @media block above.
+   ─────────────────────────────────────────────────────────────────────────── */
+:root.dark {
+  --color-bg:             var(--color-gray-950);
+  --color-text:           #ffffff;
+  --color-text-secondary: var(--color-gray-400);
+  --color-surface:        var(--color-gray-800);
+  --color-surface-alt:    var(--color-gray-800);
+  --color-border:         var(--color-gray-700);
+  --color-accent:         var(--color-primary-400);
+  --color-accent-hover:   var(--color-primary-300);
+  --color-shadow:         rgba(0, 0, 0, 0.25);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Reduced-motion: gate smooth scroll and kill transitions for users who prefer it */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 1rem; /* 16px — was 0.875rem (14px), increased for readability */
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Skip-to-content link — hidden until focused, then revealed at top of page */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--color-primary-900);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  font-size: 1rem;
+  z-index: 9999;
+  border-radius: 0 0 6px 0;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Keyboard focus indicator — visible ring for all interactive elements */
+:focus-visible {
+  outline: 3px solid var(--color-primary-400);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Card container used across pages — Filament style */
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px var(--color-shadow);
+  border: 1px solid var(--color-border);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Page container */
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.page h1 {
+  font-size: 2rem; /* was 1.5rem */
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--color-text);
+  letter-spacing: -0.025em;
+}
+
+.page h2 {
+  font-size: 1.5rem; /* was 1.125rem */
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.page h3 {
+  font-size: 1.125rem; /* was 1rem */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.page p {
+  margin-bottom: 0.75rem;
+  color: var(--color-text-secondary);
+  font-size: 1rem; /* was 0.875rem */
+  line-height: 1.625;
+}
+
+.page ul {
+  margin-bottom: 0.75rem;
+  padding-left: 1.25rem;
+}
+
+.page ul li {
+  margin-bottom: 0.375rem;
+  color: var(--color-text-secondary);
+  font-size: 1rem; /* was 0.875rem */
+  line-height: 1.625;
+}
+
+.page ol {
+  margin-bottom: 0.75rem;
+  padding-left: 1.25rem;
+}
+
+.page ol li {
+  margin-bottom: 0.375rem;
+  color: var(--color-text-secondary);
+  font-size: 1rem; /* was 0.875rem */
+  line-height: 1.625;
+}
+
+.page li strong {
+  color: var(--color-text);
+}
+
+/* Subtitle / tagline */
+.subtitle {
+  font-size: 1rem; /* was 0.875rem */
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+/* Hero section — Filament-inspired */
+.hero {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.hero h1 {
+  color: var(--color-text);
+  font-size: 2rem; /* was 1.5rem */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+}
+
+.hero p {
+  color: var(--color-text-secondary);
+  font-size: 1rem; /* was 0.875rem */
+  max-width: 500px;
+  margin: 0 auto 1.25rem;
+  line-height: 1.625;
+}
+
+/* Contrast-safe button: white on primary-900 ≈ 6.8:1 (WCAG AA ✓) — fine in both themes */
+.hero .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary-900);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem; /* was 0.875rem */
+  min-height: 44px; /* WCAG 2.2 target size */
+  transition: background-color 0.15s;
+}
+
+.hero .btn:hover {
+  text-decoration: none;
+  background: var(--color-primary-800); /* white on primary-800 ≈ 5.0:1 (WCAG AA ✓) */
+}
+
+/* Benefits / features grid */
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.feature-item .icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.feature-item p {
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+  font-size: 1rem; /* was 0.875rem */
+  line-height: 1.5;
+}
+
+/* Pricing table — Filament table style */
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0.75rem;
+  font-size: 0.9375rem; /* was 0.875rem */
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pricing-table th {
+  background-color: var(--color-surface-alt);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pricing-table tr:last-child td {
+  border-bottom: none;
+}
+
+.pricing-table td {
+  color: var(--color-text-secondary);
+}
+
+.pricing-table tr:hover td {
+  background-color: var(--color-surface-alt);
+}
+
+/* Contacts / general table — Filament table style */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0.75rem;
+  font-size: 0.9375rem; /* was 0.875rem */
+}
+
+.info-table th,
+.info-table td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.info-table th {
+  background-color: var(--color-surface-alt);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.info-table tr:last-child td {
+  border-bottom: none;
+}
+
+.info-table td {
+  color: var(--color-text-secondary);
+}
+
+.info-table tr:hover td {
+  background-color: var(--color-surface-alt);
+}
+
+/* Callout / notice box — orange accent, acceptable in both themes */
+.callout {
+  background-color: rgba(249, 115, 22, 0.1);
+  border-left: 3px solid rgb(249, 115, 22);
+  border-radius: 0 6px 6px 0;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.callout p {
+  margin-bottom: 0;
+  color: var(--color-text-secondary);
+  font-size: 1rem; /* was 0.875rem */
+}
+
+.callout strong {
+  color: rgb(251, 146, 60);
+  font-weight: 600;
+}
+
+/* CTA button — contrast-safe: white on primary-900 ≈ 6.8:1 (WCAG AA ✓) — fine in both themes */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  background-color: var(--color-primary-900);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem; /* was 0.875rem */
+  line-height: 1.25rem;
+  min-height: 44px; /* WCAG 2.2 target size */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-800); /* white on primary-800 ≈ 5.0:1 (WCAG AA ✓) */
+  text-decoration: none;
+  color: white;
+}
+
+/* Schedule list */
+.schedule-list {
+  list-style: none;
+  padding: 0;
+}
+
+.schedule-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 1rem; /* was 0.875rem */
+}
+
+.schedule-list li:last-child {
+  border-bottom: none;
+}
+
+.schedule-time {
+  font-weight: 600;
+  color: var(--color-accent);
+  min-width: 120px;
+  flex-shrink: 0;
+  font-size: 0.9375rem; /* was 0.8125rem */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page {
+    padding: 1rem 0.75rem 2rem;
+  }
+
+  .hero {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-table th,
+  .pricing-table td,
+  .info-table th,
+  .info-table td {
+    padding: 0.5rem;
+    font-size: 0.9375rem;
+  }
+
+  .schedule-list li {
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+}

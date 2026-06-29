@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Anti-flash: apply stored theme class before first paint so an overridden
+         theme never flashes the OS default on load. No stored value → no class →
+         :root defaults to light and the prefers-color-scheme media query handles OS. -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'dark' || t === 'light') document.documentElement.classList.add(t);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tilton Electric Car Club</title>
+    <meta name="description" content="Tilton on the Hill Electric Car Club — a community transport scheme for Tilton and Halstead Parish, Leicestershire. Hire a shared electric car by the hour or day, or arrange a volunteer-driver lift." />
+    <meta name="theme-color" content="#72952a" />
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
