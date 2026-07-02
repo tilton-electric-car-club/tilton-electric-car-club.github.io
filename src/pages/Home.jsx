@@ -97,7 +97,7 @@ export default function Home() {
         <div className="hero-content">
           <h1 className="display">Community transport for Tilton &amp; Halstead</h1>
           <p className="hero-lead">
-            A shared electric car you can borrow by the hour or day — and a volunteer
+            Two shared electric cars you can borrow by the hour or day — and a volunteer
             driver lift for neighbours who find travelling difficult.
             Run by the community, for the community.
           </p>
@@ -155,13 +155,20 @@ export default function Home() {
           meaning it exists to create long-term benefit for local people, not to
           make a profit.
         </p>
-        <p>
-          We exist because public transport links in this part of rural Leicestershire
-          are limited. If you don&apos;t drive, or your mobility makes it difficult,
-          getting to appointments, shops, or family can be hard. TECC was set up to
-          change that.
-        </p>
-        {/* DRAFT — club to confirm legal entity details before publishing */}
+        <p>We exist for two reasons:</p>
+        <ul>
+          <li>
+            Public transport links in this part of rural Leicestershire are
+            limited. If you don&apos;t drive, or your mobility makes it difficult,
+            getting to appointments, shops, or family can be hard. TECC&apos;s
+            volunteer scheme was set up to change that.
+          </li>
+          <li>
+            Whether you want to save money, do your bit for the planet, or both,
+            using a TECC car costs a fraction of owning one — and is far less
+            polluting.
+          </li>
+        </ul>
       </div>
 
       {/* ── How it works ─────────────────────────────────────────────────────── */}
@@ -173,7 +180,7 @@ export default function Home() {
             <div className="step-body">
               <h3>Join the club</h3>
               <p>
-                Choose a membership — Occasional or Frequent driver, Need a Lift, or
+                Choose a membership — Frequent or Infrequent driver, Need a Lift, or
                 Volunteer Driver. Register online and you&apos;re ready to go.
               </p>
             </div>
@@ -183,8 +190,9 @@ export default function Home() {
             <div className="step-body">
               <h3>Book what you need</h3>
               <p>
-                Use the online booking system to reserve the electric car by the hour or
-                day, or to request a volunteer-driver lift with at least a week&apos;s notice.
+                Use the online booking system to reserve one of the two electric cars by
+                the hour or day, or to request a volunteer-driver lift with at least a
+                week&apos;s notice.
               </p>
             </div>
           </div>
@@ -193,9 +201,9 @@ export default function Home() {
             <div className="step-body">
               <h3>Travel — no hidden costs</h3>
               <p>
-                Electricity, insurance, breakdown cover, MOT, and servicing are all
-                included. There is no mileage charge. You just pay the membership and
-                hire rate.
+                All included in your monthly subscription: insurance, road tax, MOT,
+                servicing, all maintenance, breakdown cover, the booking system, and a
+                100% charge at the start of every journey. There&apos;s no mileage charge.
               </p>
             </div>
           </div>
@@ -208,11 +216,11 @@ export default function Home() {
         <div className="features">
           <div className="feature-item">
             <IconPeople className="feature-icon" />
-            <p>Support your neighbours — the lift scheme helps less mobile residents stay independent</p>
+            <p>Support your neighbours — the volunteer driver scheme helps less mobile residents stay independent</p>
           </div>
           <div className="feature-item">
             <IconPound className="feature-icon" />
-            <p>Use a car without owning one — no purchase, tax, insurance, or servicing costs</p>
+            <p>Use a car without owning one — at a fraction of the price of ownership, with no purchase, tax, insurance, or servicing costs</p>
           </div>
           <div className="feature-item">
             <IconCar className="feature-icon" />
@@ -246,16 +254,16 @@ export default function Home() {
           </thead>
           <tbody>
             <tr>
-              <td>Occasional</td>
-              <td>£10 / month</td>
-              <td>£10 / hour</td>
-              <td>£70 / day</td>
-            </tr>
-            <tr>
               <td>Frequent</td>
               <td>£30 / month</td>
               <td>£5 / hour</td>
-              <td>£45 / day</td>
+              <td>£45 max. per 24 hrs</td>
+            </tr>
+            <tr>
+              <td>Infrequent</td>
+              <td>£10 / month</td>
+              <td>£10 / hour</td>
+              <td>£70 max. per 24 hrs</td>
             </tr>
           </tbody>
         </table>
@@ -266,18 +274,41 @@ export default function Home() {
         </p>
       </div>
 
+      {/* ── Who can join ─────────────────────────────────────────────────────── */}
+      <div className="card" id="who-can-join">
+        <h2>Who can join</h2>
+        <p>Membership is open to residents who:</p>
+        <ul>
+          <li>are aged 25 to 75 (over 75 considered case by case)</li>
+          <li>have lived in the UK for at least 3 years</li>
+          <li>hold a full UK or EU driving licence held for at least 2 years</li>
+          <li>
+            have a driving record free of serious motoring convictions — a small number
+            of minor points, such as from a parking or speed-awareness case, is usually fine
+          </li>
+          <li>can provide photo ID and two proofs of address</li>
+        </ul>
+        <p style={{ marginBottom: 0 }}>
+          Cars can only be booked and used by registered members, and every car has a
+          telematics camera fitted for everyone&apos;s safety. Most residents who drive
+          will be eligible — if you&apos;re not sure, <a href="mailto:tiltonelectriccarclub@gmail.com">get in touch</a> and we&apos;ll help you check.
+        </p>
+      </div>
+
       {/* ── Volunteer ─────────────────────────────────────────────────────────── */}
       <div className="card" id="volunteer">
         <h2>Become a volunteer driver</h2>
         <p>
-          Volunteer drivers provide lifts to less mobile members of the community. All
-          volunteer drivers are <strong>DBS checked</strong> and receive training.
+          Volunteer drivers take members to visit a friend or family member, to an
+          important appointment, or to the train station. All volunteer drivers are{' '}
+          <strong>DBS checked</strong> and receive training before their first lift.
           Volunteer Driver membership is <strong>free of charge</strong>.
         </p>
         <p>
-          {/* DRAFT — club to confirm: what&apos;s involved, hours, training details, who to contact */}
-          [Club to add: a short description of what volunteering involves — e.g. how many
-          hours a month, what training is provided, who to speak to first.]
+          Not ready to drive yet? You don&apos;t need an active subscription to
+          register. Complete a car induction, log your driving licence, and supply two
+          proofs of address, and you&apos;ll be marked <strong>Ready to Go</strong> —
+          ready to help whenever a lift is needed.
         </p>
         <a href="mailto:tiltonelectriccarclub@gmail.com" className="btn-primary">
           Ask about volunteering
@@ -297,22 +328,50 @@ export default function Home() {
         </Link>
       </div>
 
+      {/* ── Accessibility & the cars ─────────────────────────────────────────── */}
+      <div className="card" id="accessibility">
+        <h2>Accessibility &amp; the cars</h2>
+        <p>
+          Both TECC cars are automatic — quiet, smooth to drive, and easy to get used
+          to. Induction training is provided before your first booking.
+        </p>
+        <p>
+          The cars have been adapted to make getting in and out easier for
+          mobility-impaired residents: a <strong>transfer plate</strong> bridges the
+          gap across the door sill for a safer transfer into the seat, and{' '}
+          <strong>hand grips</strong> are fitted for both driver and passenger.
+        </p>
+        <p style={{ marginBottom: 0 }}>
+          One car is dog-friendly; the other is kept pet-free for members with
+          allergies or other personal reasons. See our{' '}
+          <Link to="/pet-policy">pet policy</Link> for details.
+        </p>
+      </div>
+
       {/* ── About / trust / partners ─────────────────────────────────────────── */}
       <div className="card" id="about">
         <h2>About the club</h2>
         <p>
-          TECC was made possible through the support of Tilton Village Hall, Tilton Green,
-          Green Fox Community Energy, Harborough District Council, and John Farnsworth,
-          as well as the enormous effort of many volunteers.
+          TECC is the first car club of its kind in Leicestershire, developed by
+          local people and run by and for villagers in Tilton and Halstead. It has
+          been benefitting the community since September 2023.
         </p>
         <p>
-          Green Fox (a not-for-profit Leicestershire co-operative) pays for the electricity
-          to fuel the car when charged at the Village Hall.
+          The club is member-led: all members are invited to join the Steering
+          Group, which coordinates servicing and MOTs, keeps the cars roadworthy,
+          matches volunteer drivers with lift requests, ensures every volunteer
+          driver is DBS checked, and meets monthly to run the club and raise funds.
         </p>
-        {/* DRAFT — club to confirm: formal legal structure, governing body, any accreditations */}
         <p>
-          [Club to confirm: legal entity and relationship with Tilton Green Community
-          Projects Limited, and any partner logos to display here.]
+          TECC aims to give every resident the benefits of a car without the costs
+          of ownership, to build a stronger community through lift-sharing, and to
+          improve local air quality by reducing the number of privately owned
+          petrol and diesel cars on the road.
+        </p>
+        <p style={{ marginBottom: 0 }}>
+          TECC was made possible through the support of Tilton Village Hall, Tilton
+          Green, Harborough District Council, and John Farnsworth, as well as the
+          enormous effort of many volunteers.
         </p>
       </div>
 

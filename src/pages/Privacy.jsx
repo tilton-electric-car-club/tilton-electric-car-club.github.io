@@ -51,7 +51,7 @@ export default function Privacy() {
         <p>
           When you click &ldquo;Book a Car&rdquo; or &ldquo;Register
           Online,&rdquo; you are taken to a separate booking platform operated
-          by Green Fox. That platform has its own privacy policy.
+          by a third-party provider. That platform has its own privacy policy.
         </p>
         {/* DRAFT — club to add: link to booking system's own privacy policy
             once that URL is known. */}

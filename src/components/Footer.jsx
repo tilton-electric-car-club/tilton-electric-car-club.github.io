@@ -24,12 +24,13 @@ export default function Footer() {
           <Link to="/need-a-lift">Need a Lift</Link>
           <Link to="/monthly-meetings">Monthly Meetings</Link>
           <Link to="/pet-policy">Pet Policy</Link>
+          <Link to="/safeguarding">Safeguarding</Link>
           <Link to="/privacy">Privacy &amp; Contact</Link>
         </nav>
       </div>
       <div className="footer-bottom">
         <span>&copy; {new Date().getFullYear()} Tilton Electric Car Club</span>
-        <span>Supported by Tilton Green, Green Fox Community Energy &amp; Harborough District Council</span>
+        <span>Supported by Tilton Green &amp; Harborough District Council</span>
       </div>
     </footer>
   )

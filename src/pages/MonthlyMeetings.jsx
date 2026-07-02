@@ -66,7 +66,7 @@ export default function MonthlyMeetings() {
                 Booking system, payments, membership, breakdown cover, MOT,
                 servicing, maintenance &amp; insurance
               </td>
-              <td>Ben Dodd (Green Fox Community Energy)</td>
+              <td>Ben Dodd</td>
             </tr>
             <tr>
               <td>Registering to become a Member</td>

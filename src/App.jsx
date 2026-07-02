@@ -6,6 +6,7 @@ import NeedALift from './pages/NeedALift'
 import MonthlyMeetings from './pages/MonthlyMeetings'
 import PetPolicy from './pages/PetPolicy'
 import Privacy from './pages/Privacy'
+import Safeguarding from './pages/Safeguarding'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="need-a-lift" element={<NeedALift />} />
           <Route path="monthly-meetings" element={<MonthlyMeetings />} />
           <Route path="pet-policy" element={<PetPolicy />} />
+          <Route path="safeguarding" element={<Safeguarding />} />
           <Route path="privacy" element={<Privacy />} />
         </Route>
       </Routes>

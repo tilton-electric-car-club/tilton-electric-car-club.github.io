@@ -9,6 +9,10 @@ export default function NeedALift() {
       <div className="card">
         <h2>How It Works</h2>
         <p>
+          Volunteer drivers can take you to visit a friend or family member, to an
+          important appointment, or to the train station.
+        </p>
+        <p>
           When thinking about your lift request, if you are able to share your
           journey with others, this would be helpful for volunteers, cheaper, and
           more sociable. Regular journeys at times when volunteers and cars are
