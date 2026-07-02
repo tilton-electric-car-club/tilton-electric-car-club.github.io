@@ -243,27 +243,27 @@ export default function Home() {
           <li><strong>Volunteer Driver Member</strong> — drive less mobile members; membership is <strong>free of charge</strong></li>
         </ul>
         <h3>Hire charges for Driver Members</h3>
-        <table className="pricing-table">
-          <thead>
-            <tr>
-              <th scope="col">Plan</th>
-              <th scope="col">Monthly fee</th>
-              <th scope="col">Hourly rate</th>
-              <th scope="col">Day rate</th>
+        <table className="pricing-table" role="table">
+          <thead role="rowgroup">
+            <tr role="row">
+              <th scope="col" role="columnheader">Plan</th>
+              <th scope="col" role="columnheader">Monthly fee</th>
+              <th scope="col" role="columnheader">Hourly rate</th>
+              <th scope="col" role="columnheader">Day rate</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>Frequent</td>
-              <td>£30 / month</td>
-              <td>£5 / hour</td>
-              <td>£45 max. per 24 hrs</td>
+          <tbody role="rowgroup">
+            <tr role="row">
+              <td role="cell" data-label="Plan">Frequent</td>
+              <td role="cell" data-label="Monthly fee">£30 / month</td>
+              <td role="cell" data-label="Hourly rate">£5 / hour</td>
+              <td role="cell" data-label="Day rate">£45 max. per 24 hrs</td>
             </tr>
-            <tr>
-              <td>Infrequent</td>
-              <td>£10 / month</td>
-              <td>£10 / hour</td>
-              <td>£70 max. per 24 hrs</td>
+            <tr role="row">
+              <td role="cell" data-label="Plan">Infrequent</td>
+              <td role="cell" data-label="Monthly fee">£10 / month</td>
+              <td role="cell" data-label="Hourly rate">£10 / hour</td>
+              <td role="cell" data-label="Day rate">£70 max. per 24 hrs</td>
             </tr>
           </tbody>
         </table>
