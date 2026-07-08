@@ -123,11 +123,11 @@ export default function Home() {
           <span className="wayfinding-label">What we are</span>
           <span className="wayfinding-desc">Find out how it works</span>
         </a>
-        <a href="#how-it-works" className="wayfinding-card">
+        <Link to="/handbook" className="wayfinding-card">
           <IconCar className="wayfinding-icon" />
-          <span className="wayfinding-label">How it works</span>
-          <span className="wayfinding-desc">Join, book, travel</span>
-        </a>
+          <span className="wayfinding-label">Member Handbook</span>
+          <span className="wayfinding-desc">Full guide to using a car</span>
+        </Link>
         <a href="#who-can-join" className="wayfinding-card">
           <IconPeople className="wayfinding-icon" />
           <span className="wayfinding-label">Join the club</span>
