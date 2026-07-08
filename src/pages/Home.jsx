@@ -118,10 +118,20 @@ export default function Home() {
 
       {/* ── Wayfinding band ─────────────────────────────────────────────────── */}
       <nav className="wayfinding" aria-label="Find what you need">
-        <a href="#how-it-works" className="wayfinding-card">
+        <a href="#what-we-are" className="wayfinding-card">
           <IconInfo className="wayfinding-icon" />
-          <span className="wayfinding-label">New here?</span>
+          <span className="wayfinding-label">What we are</span>
           <span className="wayfinding-desc">Find out how it works</span>
+        </a>
+        <a href="#how-it-works" className="wayfinding-card">
+          <IconCar className="wayfinding-icon" />
+          <span className="wayfinding-label">How it works</span>
+          <span className="wayfinding-desc">Join, book, travel</span>
+        </a>
+        <a href="#who-can-join" className="wayfinding-card">
+          <IconPeople className="wayfinding-icon" />
+          <span className="wayfinding-label">Join the club</span>
+          <span className="wayfinding-desc">See if you're eligible</span>
         </a>
         <Link to="/need-a-lift" className="wayfinding-card">
           <IconHeart className="wayfinding-icon" />
@@ -133,20 +143,42 @@ export default function Home() {
           <span className="wayfinding-label">Volunteer driver</span>
           <span className="wayfinding-desc">Give your time to help</span>
         </a>
-        <a
-          href={BOOKING_URL}
-          className="wayfinding-card"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <IconCar className="wayfinding-icon" />
-          <span className="wayfinding-label">Book a car</span>
-          <span className="wayfinding-desc">Existing members</span>
+        <a href="#membership" className="wayfinding-card">
+          <IconPound className="wayfinding-icon" />
+          <span className="wayfinding-label">Use a car without ownership</span>
+          <span className="wayfinding-desc">See membership &amp; pricing</span>
         </a>
       </nav>
 
+      {/* ── About / trust / partners ─────────────────────────────────────────── */}
+      <div className="card" id="about">
+        <h2>About the club</h2>
+        <p>
+          TECC is the first car club of its kind in Leicestershire, developed by
+          local people and run by and for villagers in Tilton and Halstead. It has
+          been benefitting the community since September 2023.
+        </p>
+        <p>
+          The club is member-led: all members are invited to join the Steering
+          Group, which coordinates servicing and MOTs, keeps the cars roadworthy,
+          matches volunteer drivers with lift requests, ensures every volunteer
+          driver is DBS checked, and meets monthly to run the club and raise funds.
+        </p>
+        <p>
+          TECC aims to give every resident the benefits of a car without the costs
+          of ownership, to build a stronger community through lift-sharing, and to
+          improve local air quality by reducing the number of privately owned
+          petrol and diesel cars on the road.
+        </p>
+        <p style={{ marginBottom: 0 }}>
+          TECC was made possible through the support of Tilton Village Hall, Tilton
+          Green, Harborough District Council, and John Farnsworth, as well as the
+          enormous effort of many volunteers.
+        </p>
+      </div>
+
       {/* ── What TECC is ─────────────────────────────────────────────────────── */}
-      <div className="card">
+      <div className="card" id="what-we-are">
         <h2>What we are</h2>
         <p>
           Tilton Electric Car Club (TECC) is a community transport scheme for Tilton
@@ -267,10 +299,19 @@ export default function Home() {
             </tr>
           </tbody>
         </table>
-        <p style={{ marginBottom: 0 }}>
+        <p>
           Membership covers either one person or two adults at the same address.
           Electricity, insurance, breakdown cover, MOT, and servicing are all included —
           there is no mileage charge.
+        </p>
+        <p style={{ marginBottom: 0 }}>
+          According to the AA, using a TECC car works out far cheaper than running
+          your own — whether it&apos;s owned or leased. The AA puts the cost of
+          running a car at{' '}
+          <a href="https://www.theaa.com/driving-advice/driving-costs/running-costs" target="_blank" rel="noopener noreferrer">
+            £380 to £680 a month
+          </a>{' '}
+          as a minimum.
         </p>
       </div>
 
@@ -345,33 +386,6 @@ export default function Home() {
           One car is dog-friendly; the other is kept pet-free for members with
           allergies or other personal reasons. See our{' '}
           <Link to="/pet-policy">pet policy</Link> for details.
-        </p>
-      </div>
-
-      {/* ── About / trust / partners ─────────────────────────────────────────── */}
-      <div className="card" id="about">
-        <h2>About the club</h2>
-        <p>
-          TECC is the first car club of its kind in Leicestershire, developed by
-          local people and run by and for villagers in Tilton and Halstead. It has
-          been benefitting the community since September 2023.
-        </p>
-        <p>
-          The club is member-led: all members are invited to join the Steering
-          Group, which coordinates servicing and MOTs, keeps the cars roadworthy,
-          matches volunteer drivers with lift requests, ensures every volunteer
-          driver is DBS checked, and meets monthly to run the club and raise funds.
-        </p>
-        <p>
-          TECC aims to give every resident the benefits of a car without the costs
-          of ownership, to build a stronger community through lift-sharing, and to
-          improve local air quality by reducing the number of privately owned
-          petrol and diesel cars on the road.
-        </p>
-        <p style={{ marginBottom: 0 }}>
-          TECC was made possible through the support of Tilton Village Hall, Tilton
-          Green, Harborough District Council, and John Farnsworth, as well as the
-          enormous effort of many volunteers.
         </p>
       </div>
 

@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import NeedALift from './pages/NeedALift'
-import MonthlyMeetings from './pages/MonthlyMeetings'
 import PetPolicy from './pages/PetPolicy'
 import Privacy from './pages/Privacy'
 import Safeguarding from './pages/Safeguarding'
@@ -24,7 +23,6 @@ export default function App() {
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="need-a-lift" element={<NeedALift />} />
-          <Route path="monthly-meetings" element={<MonthlyMeetings />} />
           <Route path="pet-policy" element={<PetPolicy />} />
           <Route path="safeguarding" element={<Safeguarding />} />
           <Route path="privacy" element={<Privacy />} />

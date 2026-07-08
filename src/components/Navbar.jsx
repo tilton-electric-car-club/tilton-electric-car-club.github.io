@@ -10,7 +10,6 @@ const BOOKING_URL = 'https://tiltonelectriccarclub.com'
 const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/need-a-lift', label: 'Need a Lift' },
-  { to: '/monthly-meetings', label: 'Meetings' },
   { to: '/pet-policy', label: 'Pet Policy' },
 ]
 

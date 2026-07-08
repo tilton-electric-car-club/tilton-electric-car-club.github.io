@@ -406,7 +406,7 @@ img { max-width: 100%; height: auto; }
 
 .hero-lead {
   font-size: 1.125rem;
-  color: rgba(255,255,255,0.87);
+  color: var(--white);
   line-height: 1.65;
   margin-bottom: 1.75rem;
 }
@@ -453,7 +453,7 @@ img { max-width: 100%; height: auto; }
 /* ── Wayfinding band ──────────────────────────────────────────────────────────── */
 .wayfinding {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.75rem;
   margin-bottom: 1.5rem;
 }

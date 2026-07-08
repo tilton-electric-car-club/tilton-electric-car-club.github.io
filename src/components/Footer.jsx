@@ -22,7 +22,6 @@ export default function Footer() {
         </div>
         <nav className="footer-links" aria-label="Footer navigation">
           <Link to="/need-a-lift">Need a Lift</Link>
-          <Link to="/monthly-meetings">Monthly Meetings</Link>
           <Link to="/pet-policy">Pet Policy</Link>
           <Link to="/safeguarding">Safeguarding</Link>
           <Link to="/privacy">Privacy &amp; Contact</Link>
