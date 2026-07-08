@@ -24,6 +24,7 @@ export default function Footer() {
           <Link to="/need-a-lift">Need a Lift</Link>
           <Link to="/pet-policy">Pet Policy</Link>
           <Link to="/safeguarding">Safeguarding</Link>
+          <Link to="/handbook">Member Handbook</Link>
           <Link to="/privacy">Privacy &amp; Contact</Link>
         </nav>
       </div>

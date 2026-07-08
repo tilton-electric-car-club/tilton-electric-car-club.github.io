@@ -16,12 +16,16 @@ Do not change the build or deploy workflow without confirming with the user.
 A public-information front door for Tilton Electric Car Club, a community transport
 scheme in Tilton on the Hill, Leicestershire, operated under Tilton Green Community
 Projects Limited (a Community Benefit Society). The site explains the scheme to
-first-time residents, prospective volunteers, and grant assessors. It does **not**
-replace the booking/payments platform at `tiltonelectriccarclub.com`.
+first-time residents, prospective volunteers, and grant assessors — **and**, on
+`/handbook`, hosts a comprehensive member handbook (car user guide, charging,
+breakdown/accident procedure, rules) that sits a level back from the front page
+by design: the Home page stays focused and welcoming, deeper operational detail
+lives on its own page. It does **not** replace the booking/payments platform at
+`tiltonelectriccarclub.com`.
 
 ### Routes
 
-`/` Home · `/need-a-lift` · `/monthly-meetings` · `/pet-policy` · `/privacy`
+`/` Home · `/need-a-lift` · `/pet-policy` · `/safeguarding` · `/handbook` · `/privacy`
 
 Internal links must use React Router `<Link>` — never bare `<a href="...">` for
 in-app routes (causes full-page reloads with the SPA setup).
@@ -31,6 +35,14 @@ in-app routes (causes full-page reloads with the SPA setup).
 Many sections in `Home.jsx` carry `{/* DRAFT — club to confirm */}` comments.
 **Do not invent or fill in** governance details, legal entity numbers, or partner
 descriptions. Leave the placeholders until the club provides verified text.
+
+**Privacy — personal contact details.** The handbook contains named individuals'
+personal mobile numbers (Steering Group members) and third-party support lines.
+Only Simon's number and the club email are published site-wide (footer,
+Handbook contacts) — do not add other individuals' personal phone numbers
+without their explicit confirmation. Member-only security codes (key-safe
+codes, RFID card numbers) must never be published; the handbook page describes
+the *process* only (e.g. "the code emailed to you"), never an actual value.
 
 ### Out of scope (do not implement)
 
@@ -159,6 +171,7 @@ The site must serve four distinct groups without assuming one:
 |------|---------|
 | `src/index.css` | All design tokens, base styles, component classes |
 | `src/pages/Home.jsx` | Main landing page — wayfinding band, hero, all sections |
+| `src/pages/Handbook.jsx` | Comprehensive member handbook — car use, charging, rules, incidents |
 | `src/components/Navbar.jsx` / `Navbar.css` | Sticky forest-green nav, logo swap, Book a Car |
 | `src/components/Footer.jsx` / `Footer.css` | Forest-green footer, partner credits |
 | `src/components/Layout.jsx` | Skip link + Navbar + main + Footer wrapper |

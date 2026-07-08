@@ -6,12 +6,24 @@ import NeedALift from './pages/NeedALift'
 import PetPolicy from './pages/PetPolicy'
 import Privacy from './pages/Privacy'
 import Safeguarding from './pages/Safeguarding'
+import Handbook from './pages/Handbook'
 
 function ScrollToTop() {
-  const { pathname } = useLocation()
+  const { pathname, hash } = useLocation()
   useEffect(() => {
+    if (hash) {
+      // Cross-page anchor links (e.g. /#who-can-join from another route) —
+      // give the new page a tick to render before scrolling to the target.
+      const id = hash.slice(1)
+      const scrollToHash = () => {
+        const el = document.getElementById(id)
+        if (el) el.scrollIntoView()
+      }
+      requestAnimationFrame(scrollToHash)
+      return
+    }
     window.scrollTo(0, 0)
-  }, [pathname])
+  }, [pathname, hash])
   return null
 }
 
@@ -25,6 +37,7 @@ export default function App() {
           <Route path="need-a-lift" element={<NeedALift />} />
           <Route path="pet-policy" element={<PetPolicy />} />
           <Route path="safeguarding" element={<Safeguarding />} />
+          <Route path="handbook" element={<Handbook />} />
           <Route path="privacy" element={<Privacy />} />
         </Route>
       </Routes>

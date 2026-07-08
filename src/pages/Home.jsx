@@ -232,10 +232,12 @@ export default function Home() {
             <div className="step-number" aria-hidden="true">3</div>
             <div className="step-body">
               <h3>Travel — no hidden costs</h3>
-              <p>
+              <p style={{ marginBottom: 0 }}>
                 All included in your monthly subscription: insurance, road tax, MOT,
                 servicing, all maintenance, breakdown cover, the booking system, and a
                 100% charge at the start of every journey. There&apos;s no mileage charge.
+                For collecting, charging, and returning a car step by step, see the{' '}
+                <Link to="/handbook">Member Handbook</Link>.
               </p>
             </div>
           </div>
