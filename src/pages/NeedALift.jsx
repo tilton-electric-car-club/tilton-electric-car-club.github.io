@@ -30,17 +30,10 @@ export default function NeedALift() {
             a booking is confirmed, you won't be charged.
           </li>
           <li>
-            To calculate the journey time, use the{' '}
-            <a
-              href="https://www.theaa.com/route-planner/route"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              AA Route Planner
-            </a>{' '}
-            to find the approximate timing. When booking, add additional time to
-            allow the driver to check, collect and return the cars and for
-            traffic delays.
+            To calculate the journey time, use an online route planner (such as
+            Google Maps) to find the approximate timing. When booking, add
+            additional time to allow the driver to check, collect and return
+            the cars and for traffic delays.
           </li>
           <li>
             If your journey can be flexible in terms of time of day or date,

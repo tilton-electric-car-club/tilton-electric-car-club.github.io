@@ -101,17 +101,6 @@ export default function Home() {
             driver lift for neighbours who find travelling difficult.
             Run by the community, for the community.
           </p>
-          <div className="hero-actions">
-            <a href="#how-it-works" className="btn-primary">How it works</a>
-            <a
-              href={BOOKING_URL + '/register'}
-              className="btn-secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Join the club
-            </a>
-          </div>
         </div>
         <HillHorizon />
       </section>
@@ -123,11 +112,11 @@ export default function Home() {
           <span className="wayfinding-label">What we are</span>
           <span className="wayfinding-desc">Find out how it works</span>
         </a>
-        <Link to="/handbook" className="wayfinding-card">
+        <a href="#how-it-works" className="wayfinding-card">
           <IconCar className="wayfinding-icon" />
-          <span className="wayfinding-label">Member Handbook</span>
-          <span className="wayfinding-desc">Full guide to using a car</span>
-        </Link>
+          <span className="wayfinding-label">How it works</span>
+          <span className="wayfinding-desc">Join, book, travel</span>
+        </a>
         <a href="#who-can-join" className="wayfinding-card">
           <IconPeople className="wayfinding-icon" />
           <span className="wayfinding-label">Join the club</span>
@@ -309,11 +298,7 @@ export default function Home() {
         <p style={{ marginBottom: 0 }}>
           According to the AA, using a TECC car works out far cheaper than running
           your own — whether it&apos;s owned or leased. The AA puts the cost of
-          running a car at{' '}
-          <a href="https://www.theaa.com/driving-advice/driving-costs/running-costs" target="_blank" rel="noopener noreferrer">
-            £380 to £680 a month
-          </a>{' '}
-          as a minimum.
+          running a car at £380 to £680 a month as a minimum.
         </p>
       </div>
 
