@@ -131,7 +131,10 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-@media (max-width: 768px) {
+/* Breakpoint widened from 768px to 960px: the primary nav now carries 6 links
+   (Home, About, Join, Membership, Volunteer, Need a Lift) plus Book a Car — too
+   many to fit the 56px bar at tablet widths without collapsing to the hamburger. */
+@media (max-width: 960px) {
   .hamburger { display: flex; }
 
   .navbar-links {

@@ -211,8 +211,8 @@ export default function Handbook() {
           the transfer plate.
         </p>
         <p style={{ marginBottom: 0 }}>
-          See the Home page's{' '}
-          <Link to="/#accessibility">Accessibility &amp; the cars</Link> section
+          See the About page's{' '}
+          <Link to="/about#accessibility">Accessibility &amp; the cars</Link> section
           for the dog-friendly car policy too.
         </p>
       </div>
@@ -336,9 +336,8 @@ export default function Handbook() {
         </p>
         <ul>
           <li>
-            <Link to="/#who-can-join">Who can join</Link> and{' '}
-            <Link to="/#membership">membership &amp; pricing</Link> — on the
-            Home page
+            <Link to="/join">Who can join</Link> and{' '}
+            <Link to="/membership">membership &amp; pricing</Link>
           </li>
           <li>
             <Link to="/pet-policy">Pet policy</Link> — travelling with dogs and

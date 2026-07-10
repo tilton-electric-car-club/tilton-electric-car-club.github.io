@@ -107,130 +107,46 @@ export default function Home() {
 
       {/* ── Wayfinding band ─────────────────────────────────────────────────── */}
       <nav className="wayfinding" aria-label="Find what you need">
-        <a href="#what-we-are" className="wayfinding-card">
+        <Link to="/about" className="wayfinding-card">
           <IconInfo className="wayfinding-icon" />
           <span className="wayfinding-label">What we are</span>
           <span className="wayfinding-desc">Find out how it works</span>
-        </a>
-        <a href="#how-it-works" className="wayfinding-card">
+        </Link>
+        <Link to="/about#how-it-works" className="wayfinding-card">
           <IconCar className="wayfinding-icon" />
           <span className="wayfinding-label">How it works</span>
           <span className="wayfinding-desc">Join, book, travel</span>
-        </a>
-        <a href="#who-can-join" className="wayfinding-card">
+        </Link>
+        <Link to="/join" className="wayfinding-card">
           <IconPeople className="wayfinding-icon" />
           <span className="wayfinding-label">Join the club</span>
           <span className="wayfinding-desc">See if you're eligible</span>
-        </a>
+        </Link>
         <Link to="/need-a-lift" className="wayfinding-card">
           <IconHeart className="wayfinding-icon" />
           <span className="wayfinding-label">Need a lift?</span>
           <span className="wayfinding-desc">For less mobile residents</span>
         </Link>
-        <a href="#volunteer" className="wayfinding-card">
+        <Link to="/volunteer" className="wayfinding-card">
           <IconPeople className="wayfinding-icon" />
           <span className="wayfinding-label">Volunteer driver</span>
           <span className="wayfinding-desc">Give your time to help</span>
-        </a>
-        <a href="#membership" className="wayfinding-card">
+        </Link>
+        <Link to="/membership" className="wayfinding-card">
           <IconPound className="wayfinding-icon" />
           <span className="wayfinding-label">Use a car without ownership</span>
           <span className="wayfinding-desc">See membership &amp; pricing</span>
-        </a>
+        </Link>
       </nav>
 
-      {/* ── About / trust / partners ─────────────────────────────────────────── */}
-      <div className="card" id="about">
+      {/* ── About teaser ─────────────────────────────────────────────────────── */}
+      <div className="card">
         <h2>About the club</h2>
-        <p>
-          TECC is the first car club of its kind in Leicestershire, developed by
-          local people and run by and for villagers in Tilton and Halstead. It has
-          been benefitting the community since September 2023.
-        </p>
-        <p>
-          The club is member-led: all members are invited to join the Steering
-          Group, which coordinates servicing and MOTs, keeps the cars roadworthy,
-          matches volunteer drivers with lift requests, ensures every volunteer
-          driver is DBS checked, and meets monthly to run the club and raise funds.
-        </p>
-        <p>
-          TECC aims to give every resident the benefits of a car without the costs
-          of ownership, to build a stronger community through lift-sharing, and to
-          improve local air quality by reducing the number of privately owned
-          petrol and diesel cars on the road.
-        </p>
         <p style={{ marginBottom: 0 }}>
-          TECC was made possible through the support of Tilton Village Hall, Tilton
-          Green, Harborough District Council, and John Farnsworth, as well as the
-          enormous effort of many volunteers.
+          TECC is the first car club of its kind in Leicestershire, run by and for
+          villagers in Tilton and Halstead since September 2023. Read more about{' '}
+          <Link to="/about">what we are and how it works</Link>.
         </p>
-      </div>
-
-      {/* ── What TECC is ─────────────────────────────────────────────────────── */}
-      <div className="card" id="what-we-are">
-        <h2>What we are</h2>
-        <p>
-          Tilton Electric Car Club (TECC) is a community transport scheme for Tilton
-          on the Hill and Halstead Parish in Leicestershire. It is operated under
-          Tilton Green Community Projects Limited, a Community Benefit Society —
-          meaning it exists to create long-term benefit for local people, not to
-          make a profit.
-        </p>
-        <p>We exist for two reasons:</p>
-        <ul>
-          <li>
-            Public transport links in this part of rural Leicestershire are
-            limited. If you don&apos;t drive, or your mobility makes it difficult,
-            getting to appointments, shops, or family can be hard. TECC&apos;s
-            volunteer scheme was set up to change that.
-          </li>
-          <li>
-            Whether you want to save money, do your bit for the planet, or both,
-            using a TECC car costs a fraction of owning one — and is far less
-            polluting.
-          </li>
-        </ul>
-      </div>
-
-      {/* ── How it works ─────────────────────────────────────────────────────── */}
-      <div className="card" id="how-it-works">
-        <h2>How it works</h2>
-        <div className="steps">
-          <div className="step">
-            <div className="step-number" aria-hidden="true">1</div>
-            <div className="step-body">
-              <h3>Join the club</h3>
-              <p>
-                Choose a membership — Frequent or Infrequent driver, Need a Lift, or
-                Volunteer Driver. Register online and you&apos;re ready to go.
-              </p>
-            </div>
-          </div>
-          <div className="step">
-            <div className="step-number" aria-hidden="true">2</div>
-            <div className="step-body">
-              <h3>Book what you need</h3>
-              <p>
-                Use the online booking system to reserve one of the two electric cars by
-                the hour or day, or to request a volunteer-driver lift with at least a
-                week&apos;s notice.
-              </p>
-            </div>
-          </div>
-          <div className="step">
-            <div className="step-number" aria-hidden="true">3</div>
-            <div className="step-body">
-              <h3>Travel — no hidden costs</h3>
-              <p style={{ marginBottom: 0 }}>
-                All included in your monthly subscription: insurance, road tax, MOT,
-                servicing, all maintenance, breakdown cover, the booking system, and a
-                100% charge at the start of every journey. There&apos;s no mileage charge.
-                For collecting, charging, and returning a car step by step, see the{' '}
-                <Link to="/handbook">Member Handbook</Link>.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* ── Why it works for you ─────────────────────────────────────────────── */}
@@ -256,93 +172,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── Membership & pricing ─────────────────────────────────────────────── */}
-      <div className="card" id="membership">
-        <h2>Membership &amp; pricing</h2>
-        <p>There are three membership types:</p>
-        <ul>
-          <li><strong>Driver Member</strong> — hire the car yourself</li>
-          <li><strong>Need a Lift Member</strong> — for less mobile residents who need volunteer-driver trips</li>
-          <li><strong>Volunteer Driver Member</strong> — drive less mobile members; membership is <strong>free of charge</strong></li>
-        </ul>
-        <h3>Hire charges for Driver Members</h3>
-        <table className="pricing-table" role="table">
-          <thead role="rowgroup">
-            <tr role="row">
-              <th scope="col" role="columnheader">Plan</th>
-              <th scope="col" role="columnheader">Monthly fee</th>
-              <th scope="col" role="columnheader">Hourly rate</th>
-              <th scope="col" role="columnheader">Day rate</th>
-            </tr>
-          </thead>
-          <tbody role="rowgroup">
-            <tr role="row">
-              <td role="cell" data-label="Plan">Frequent</td>
-              <td role="cell" data-label="Monthly fee">£30 / month</td>
-              <td role="cell" data-label="Hourly rate">£5 / hour</td>
-              <td role="cell" data-label="Day rate">£45 max. per 24 hrs</td>
-            </tr>
-            <tr role="row">
-              <td role="cell" data-label="Plan">Infrequent</td>
-              <td role="cell" data-label="Monthly fee">£10 / month</td>
-              <td role="cell" data-label="Hourly rate">£10 / hour</td>
-              <td role="cell" data-label="Day rate">£70 max. per 24 hrs</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          Membership covers either one person or two adults at the same address.
-          Electricity, insurance, breakdown cover, MOT, and servicing are all included —
-          there is no mileage charge.
-        </p>
-        <p style={{ marginBottom: 0 }}>
-          According to the AA, using a TECC car works out far cheaper than running
-          your own — whether it&apos;s owned or leased. The AA puts the cost of
-          running a car at £380 to £680 a month as a minimum.
-        </p>
-      </div>
-
-      {/* ── Who can join ─────────────────────────────────────────────────────── */}
-      <div className="card" id="who-can-join">
-        <h2>Who can join</h2>
-        <p>Membership is open to residents who:</p>
-        <ul>
-          <li>are aged 25 to 75 (over 75 considered case by case)</li>
-          <li>have lived in the UK for at least 3 years</li>
-          <li>hold a full UK or EU driving licence held for at least 2 years</li>
-          <li>
-            have a driving record free of serious motoring convictions — a small number
-            of minor points, such as from a parking or speed-awareness case, is usually fine
-          </li>
-          <li>can provide photo ID and two proofs of address</li>
-        </ul>
-        <p style={{ marginBottom: 0 }}>
-          Cars can only be booked and used by registered members, and every car has a
-          telematics camera fitted for everyone&apos;s safety. Most residents who drive
-          will be eligible — if you&apos;re not sure, <a href="mailto:tiltonelectriccarclub@gmail.com">get in touch</a> and we&apos;ll help you check.
-        </p>
-      </div>
-
-      {/* ── Volunteer ─────────────────────────────────────────────────────────── */}
-      <div className="card" id="volunteer">
-        <h2>Become a volunteer driver</h2>
-        <p>
-          Volunteer drivers take members to visit a friend or family member, to an
-          important appointment, or to the train station. All volunteer drivers are{' '}
-          <strong>DBS checked</strong> and receive training before their first lift.
-          Volunteer Driver membership is <strong>free of charge</strong>.
-        </p>
-        <p>
-          Not ready to drive yet? You don&apos;t need an active subscription to
-          register. Complete a car induction, log your driving licence, and supply two
-          proofs of address, and you&apos;ll be marked <strong>Ready to Go</strong> —
-          ready to help whenever a lift is needed.
-        </p>
-        <a href="mailto:tiltonelectriccarclub@gmail.com" className="btn-primary">
-          Ask about volunteering
-        </a>
-      </div>
-
       {/* ── Need a Lift ──────────────────────────────────────────────────────── */}
       <div className="card">
         <h2>Need a lift?</h2>
@@ -356,25 +185,17 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* ── Accessibility & the cars ─────────────────────────────────────────── */}
-      <div className="card" id="accessibility">
-        <h2>Accessibility &amp; the cars</h2>
-        <p>
-          Both TECC cars are automatic — quiet, smooth to drive, and easy to get used
-          to. Induction training is provided before your first booking.
-        </p>
-        <p>
-          The cars have been adapted to make getting in and out easier for
-          mobility-impaired residents: a <strong>transfer plate</strong> bridges the
-          gap across the door sill for a safer transfer into the seat, and{' '}
-          <strong>hand grips</strong> are fitted for both driver and passenger.
-        </p>
-        <p style={{ marginBottom: 0 }}>
-          One car is dog-friendly; the other is kept pet-free for members with
-          allergies or other personal reasons. See our{' '}
-          <Link to="/pet-policy">pet policy</Link> for details.
-        </p>
+      {/* ── Quotes ───────────────────────────────────────────────────────────── */}
+      {/* DRAFT — club to confirm: Selene's v1 sitemap sketch includes a member
+          quotes/testimonials section here. Left out of the visible page until
+          the club supplies real quotes — publishing a visible "coming soon"
+          placeholder on a page grant assessors read felt worse than omitting it.
+          Uncomment and populate once quotes are available:
+      <div className="card">
+        <h2>What members say</h2>
+        <p style={{ marginBottom: 0 }}>...</p>
       </div>
+      */}
 
       {/* ── Contact ──────────────────────────────────────────────────────────── */}
       <div className="card" id="contact">
@@ -404,15 +225,6 @@ export default function Home() {
             Member login
           </a>
         </div>
-      </div>
-
-      {/* ── Trust band ───────────────────────────────────────────────────────── */}
-      <div className="trust-band">
-        <p>
-          Operated under Tilton Green Community Projects Limited, a Community Benefit
-          Society — governed for community benefit, not profit.
-          {/* DRAFT — club to confirm: registration number */}
-        </p>
       </div>
 
     </div>

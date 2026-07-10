@@ -9,8 +9,11 @@ const BOOKING_URL = 'https://tiltonelectriccarclub.com'
 
 const navLinks = [
   { to: '/', label: 'Home' },
+  { to: '/about', label: 'About' },
+  { to: '/join', label: 'Join' },
+  { to: '/membership', label: 'Membership' },
+  { to: '/volunteer', label: 'Volunteer' },
   { to: '/need-a-lift', label: 'Need a Lift' },
-  { to: '/pet-policy', label: 'Pet Policy' },
 ]
 
 export default function Navbar() {
