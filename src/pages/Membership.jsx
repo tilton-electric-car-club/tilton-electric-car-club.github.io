@@ -8,16 +8,23 @@ export default function Membership() {
         Choose a membership and see hire charges.
       </p>
 
-      {/* ── Membership types & pricing ───────────────────────────────────────── */}
+      {/* ── Membership types ─────────────────────────────────────────────────── */}
       <div className="card" id="membership-types">
         <h2>Membership types</h2>
         <p>There are three membership types:</p>
         <ul>
           <li><strong>Driver Member</strong> — hire the car yourself</li>
-          <li><strong>Need a Lift Member</strong> — for less mobile residents who need volunteer-driver trips</li>
-          <li><strong>Volunteer Driver Member</strong> — drive less mobile members; membership is <strong>free of charge</strong></li>
+          <li><strong>Need a Lift Member</strong> — for less mobile residents unable to drive – hire the car and get a volunteer to drive</li>
+          <li style={{ marginBottom: 0 }}><strong>Volunteer Driver Member</strong> — drive less-mobile members; membership is <strong>free of charge</strong>*</li>
         </ul>
-        <h3>Hire charges for Driver Members</h3>
+        <p className="footnote">
+          * a volunteer driver must subscribe if they also wish to use the cars for personal use
+        </p>
+      </div>
+
+      {/* ── Hire charges ──────────────────────────────────────────────────────── */}
+      <div className="card">
+        <h3 style={{ marginTop: 0 }}>Hire charges for Driver Members</h3>
         <table className="pricing-table" role="table">
           <thead role="rowgroup">
             <tr role="row">
@@ -47,11 +54,15 @@ export default function Membership() {
           Electricity, insurance, breakdown cover, MOT, and servicing are all included —
           there is no mileage charge.
         </p>
-        <p style={{ marginBottom: 0 }}>
+        <p>
           According to the AA, using a TECC car works out far cheaper than running
           your own — whether it&apos;s owned or leased. The AA puts the cost of
           running a car at £380 to £680 a month as a minimum.
         </p>
+        <ul style={{ marginBottom: 0 }}>
+          <li><strong>Frequent driver:</strong> use of the cars on a daily or weekly frequency</li>
+          <li style={{ marginBottom: 0 }}><strong>Infrequent driver:</strong> use of the cars on a monthly frequency</li>
+        </ul>
       </div>
 
       {/* ── Additional charges ───────────────────────────────────────────────── */}
@@ -59,9 +70,8 @@ export default function Membership() {
         <h2>Additional charges</h2>
         <p style={{ marginBottom: 0 }}>
           A few extra charges may apply in specific situations — for example running
-          out of charge, returning a car late, or losing a key or charging card. See
-          the Member Handbook for the{' '}
-          <Link to="/handbook#additional-charges">full list of additional charges</Link>.
+          out of charge, returning a car late, or losing a key or charging card. Members
+          are given the full list of additional charges when they join.
         </p>
       </div>
 

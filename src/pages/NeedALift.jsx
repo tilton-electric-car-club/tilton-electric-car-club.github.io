@@ -9,14 +9,14 @@ export default function NeedALift() {
       <div className="card">
         <h2>How It Works</h2>
         <p>
-          Volunteer drivers can take you to visit a friend or family member, to an
-          important appointment, or to the train station.
+          Volunteer drivers can take you to an appointment, to the train station or
+          to visit a friend or family member, or wherever they want to go.
         </p>
         <p>
           When thinking about your lift request, if you are able to share your
           journey with others, this would be helpful for volunteers, cheaper, and
           more sociable. Regular journeys at times when volunteers and cars are
-          available should be easier to diarise.
+          available should be easier to accommodate.
         </p>
       </div>
 
@@ -28,6 +28,12 @@ export default function NeedALift() {
             request. If you haven't had your request confirmed 48 hours before
             your journey, please assume that a volunteer is not available. Until
             a booking is confirmed, you won't be charged.
+          </li>
+          <li>
+            If you have not managed to get a lift when you wanted it, it is always
+            worthwhile to reach out to the volunteers via the dedicated WhatsApp
+            group &ndash; peoples&apos; commitments can change or volunteers may
+            swap amongst themselves.
           </li>
           <li>
             To calculate the journey time, use an online route planner (such as

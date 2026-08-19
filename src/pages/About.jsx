@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom'
+import charging from '../assets/charging.jpg'
+import membersLcca from '../assets/members-lcca-2024.jpg'
+import carLivery from '../assets/car-livery.png'
 
 export default function About() {
   return (
@@ -28,11 +31,20 @@ export default function About() {
           improve local air quality by reducing the number of privately owned
           petrol and diesel cars on the road.
         </p>
-        <p style={{ marginBottom: 0 }}>
+        <p>
           TECC was made possible through the support of Tilton Village Hall, Tilton
           Green, Harborough District Council, and John Farnsworth, as well as the
           enormous effort of many volunteers.
         </p>
+        <figure className="figure figure--inline" style={{ marginBottom: 0 }}>
+          <img
+            src={membersLcca}
+            width="320"
+            height="189"
+            loading="lazy"
+            alt="TECC members and volunteers gathered with the two club cars at an awards event"
+          />
+        </figure>
       </div>
 
       {/* ── What we are ──────────────────────────────────────────────────────── */}
@@ -64,6 +76,16 @@ export default function About() {
       {/* ── How it works ─────────────────────────────────────────────────────── */}
       <div className="card" id="how-it-works">
         <h2>How it works</h2>
+        <figure className="figure figure--inline">
+          <img
+            src={charging}
+            width="384"
+            height="331"
+            loading="lazy"
+            alt="A member tapping an RFID card to start charging a TECC car at a Blink charge point"
+          />
+          <figcaption>Tap your card to charge — see step 3</figcaption>
+        </figure>
         <div className="steps">
           <div className="step">
             <div className="step-number" aria-hidden="true">1</div>
@@ -96,8 +118,6 @@ export default function About() {
                 All included in your monthly subscription: insurance, road tax, MOT,
                 servicing, all maintenance, breakdown cover, the booking system, and a
                 100% charge at the start of every journey. There&apos;s no mileage charge.
-                For collecting, charging, and returning a car step by step, see the{' '}
-                <Link to="/handbook">Member Handbook</Link>.
               </p>
             </div>
           </div>
@@ -107,6 +127,15 @@ export default function About() {
       {/* ── Accessibility & the cars ─────────────────────────────────────────── */}
       <div className="card" id="accessibility">
         <h2>Accessibility &amp; the cars</h2>
+        <figure className="figure figure--inline">
+          <img
+            src={carLivery}
+            width="306"
+            height="120"
+            loading="lazy"
+            alt="Illustration of a TECC car in club livery"
+          />
+        </figure>
         <p>
           Both TECC cars are automatic — quiet, smooth to drive, and easy to get used
           to. Induction training is provided before your first booking.

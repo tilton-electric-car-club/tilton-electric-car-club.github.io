@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom'
+import logo from '../assets/tilton-dark.png'
+import carTecc from '../assets/car-tecc.jpg'
+import carTecc700 from '../assets/car-tecc-700.jpg'
 
 /* Inline SVG icons — simple line style, consistent weight, brand colours via currentColor */
 function IconCar({ className }) {
@@ -95,15 +98,39 @@ export default function Home() {
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
       <section className="hero" aria-label="Introduction">
         <div className="hero-content">
-          <h1 className="display">Community transport for Tilton &amp; Halstead</h1>
+          <h1 className="hero-logo">
+            <img
+              src={logo}
+              width="1161"
+              height="467"
+              fetchPriority="high"
+              alt="Tilton Electric Car Club"
+            />
+          </h1>
           <p className="hero-lead">
-            Two shared electric cars you can borrow by the hour or day — and a volunteer
-            driver lift for neighbours who find travelling difficult.
-            Run by the community, for the community.
+            Tilton and Halstead Electric Car Club, run by our community, for our community.
           </p>
+          <p className="hero-join-title">Join TECC to</p>
+          <ul className="hero-join-list">
+            <li>Drive an EV yourself</li>
+            <li>Get a lift in an EV</li>
+            <li>Help others in our community by volunteering to drive</li>
+          </ul>
         </div>
         <HillHorizon />
       </section>
+
+      {/* ── Photo ────────────────────────────────────────────────────────────── */}
+      <figure className="figure">
+        <img
+          src={carTecc}
+          srcSet={`${carTecc700} 640w, ${carTecc} 1200w`}
+          sizes="(max-width: 700px) 100vw, 900px"
+          width="1200"
+          height="902"
+          alt="A TECC member sitting in one of the club's electric cars, in TECC livery"
+        />
+      </figure>
 
       {/* ── Wayfinding band ─────────────────────────────────────────────────── */}
       <nav className="wayfinding" aria-label="Find what you need">

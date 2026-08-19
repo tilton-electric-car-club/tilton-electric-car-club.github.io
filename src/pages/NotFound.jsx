@@ -16,8 +16,7 @@ export default function NotFound() {
           <li><Link to="/join">Join the club</Link></li>
           <li><Link to="/membership">Membership &amp; pricing</Link></li>
           <li><Link to="/volunteer">Volunteer driver</Link></li>
-          <li><Link to="/need-a-lift">Need a lift</Link></li>
-          <li style={{ marginBottom: 0 }}><Link to="/handbook">Member Handbook</Link></li>
+          <li style={{ marginBottom: 0 }}><Link to="/need-a-lift">Need a lift</Link></li>
         </ul>
       </div>
 

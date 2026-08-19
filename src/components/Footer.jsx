@@ -13,7 +13,9 @@ export default function Footer() {
             <a href="mailto:tiltonelectriccarclub@gmail.com">
               tiltonelectriccarclub@gmail.com
             </a>
-            &ensp;&middot;&ensp;Simon: 07766&nbsp;446132
+          </p>
+          <p>
+            Simon: <a href="tel:+447766446132">07766&nbsp;446132</a>
           </p>
           <p>
             Operated under Tilton Green Community Projects Limited
@@ -24,7 +26,6 @@ export default function Footer() {
           <Link to="/need-a-lift">Need a Lift</Link>
           <Link to="/pet-policy">Pet Policy</Link>
           <Link to="/safeguarding">Safeguarding</Link>
-          <Link to="/handbook">Member Handbook</Link>
           <Link to="/privacy">Privacy &amp; Contact</Link>
         </nav>
       </div>

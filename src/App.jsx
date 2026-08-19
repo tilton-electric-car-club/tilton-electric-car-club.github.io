@@ -10,7 +10,6 @@ import NeedALift from './pages/NeedALift'
 import PetPolicy from './pages/PetPolicy'
 import Privacy from './pages/Privacy'
 import Safeguarding from './pages/Safeguarding'
-import Handbook from './pages/Handbook'
 import NotFound from './pages/NotFound'
 
 function ScrollToTop() {
@@ -46,7 +45,6 @@ export default function App() {
           <Route path="need-a-lift" element={<NeedALift />} />
           <Route path="pet-policy" element={<PetPolicy />} />
           <Route path="safeguarding" element={<Safeguarding />} />
-          <Route path="handbook" element={<Handbook />} />
           <Route path="privacy" element={<Privacy />} />
           <Route path="*" element={<NotFound />} />
         </Route>

@@ -86,13 +86,9 @@ export default function Join() {
             See <Link to="/membership">membership &amp; pricing</Link> for the three
             membership types and hire charges.
           </li>
-          <li>
+          <li style={{ marginBottom: 0 }}>
             Travelling with a dog or other pet? Check our{' '}
             <Link to="/pet-policy">pet policy</Link>.
-          </li>
-          <li style={{ marginBottom: 0 }}>
-            Read <Link to="/handbook#the-rules">looking after the cars — the rules</Link>{' '}
-            in the Member Handbook.
           </li>
         </ul>
       </div>

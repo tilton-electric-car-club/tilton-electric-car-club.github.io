@@ -361,6 +361,12 @@ img { max-width: 100%; height: auto; }
   line-height: 1.6;
 }
 
+.card .footnote {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+}
+
 /* ── Card ─────────────────────────────────────────────────────────────────────── */
 .card {
   background: var(--color-surface);
@@ -394,14 +400,16 @@ img { max-width: 100%; height: auto; }
   padding-bottom: 2rem;
 }
 
-.hero h1 {
-  font-family: var(--font-display);
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--white);
-  margin-bottom: 0.875rem;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
+.hero-logo {
+  margin: 0 0 1.25rem;
+}
+
+.hero-logo img {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .hero .hero-lead {
@@ -411,6 +419,42 @@ img { max-width: 100%; height: auto; }
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
   line-height: 1.65;
   margin-bottom: 1.75rem;
+}
+
+.hero .hero-join-title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.625rem;
+}
+
+.hero .hero-join-list {
+  list-style: none;
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0.5rem;
+  padding: 0;
+}
+
+.hero .hero-join-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: var(--white);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  margin-bottom: 0.375rem;
+}
+
+.hero-join-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--white);
 }
 
 .hero-actions {
@@ -681,6 +725,28 @@ img { max-width: 100%; height: auto; }
   line-height: 1.6;
 }
 
+/* ── Photo figures ────────────────────────────────────────────────────────────────── */
+.figure {
+  margin: 0 0 1.25rem;
+}
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+.figure figcaption {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.5rem;
+}
+
+/* Smaller, inline photo inside a card — charging photo, group photo, livery diagram */
+.figure--inline {
+  max-width: 340px;
+  margin: 0 auto 1.25rem;
+}
+
 /* ── Responsive ─────────────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .page {
@@ -692,8 +758,8 @@ img { max-width: 100%; height: auto; }
     border-radius: 6px;
   }
 
-  .hero h1 {
-    font-size: 1.875rem;
+  .hero-logo img {
+    max-width: 320px;
   }
 
   .hero-lead {
