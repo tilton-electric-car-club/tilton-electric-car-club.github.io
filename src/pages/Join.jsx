@@ -93,12 +93,57 @@ export default function Join() {
         </ul>
       </div>
 
-      {/* ── Not ready yet ────────────────────────────────────────────────────── */}
-      <div className="card">
+      {/* ── Not ready yet / Ready to Go ──────────────────────────────────────── */}
+      {/* DRAFT — club to confirm: adapted from the club's 'Ready to Go' flyer
+          (Trev, Nov 2025); wording not yet signed off. */}
+      <div className="card" id="ready-to-go">
         <h2>Not ready to join yet?</h2>
-        <p style={{ marginBottom: 0 }}>
-          Not sure if TECC is right for you? <a href="mailto:tiltonelectriccarclub@gmail.com">Get in touch</a>{' '}
-          — we&apos;re happy to answer questions before you commit.
+        <p>
+          You can get set up now and only start paying when you actually need a car.
+          Register, complete your induction, and leave your subscription switched off
+          until the day you need to drive — a car off the road, a gap between
+          vehicles, or a one-off trip where a hire car or taxi would cost more. TECC
+          calls this being <strong>Ready to Go</strong>.
+        </p>
+        <div className="steps">
+          <div className="step">
+            <div className="step-number" aria-hidden="true">1</div>
+            <div className="step-body">
+              <h3>Register on the booking system</h3>
+              <p>
+                Register your details and book an induction slot — steps 1 and 3
+                above. Please allow around five days for your induction to be
+                arranged.
+              </p>
+            </div>
+          </div>
+          <div className="step">
+            <div className="step-number" aria-hidden="true">2</div>
+            <div className="step-body">
+              <h3>Leave your subscription switched off</h3>
+              <p>
+                Complete the sign-up but don&apos;t start a subscription. There is
+                nothing to pay while your account sits ready.
+              </p>
+            </div>
+          </div>
+          <div className="step">
+            <div className="step-number" aria-hidden="true">3</div>
+            <div className="step-body">
+              <h3>Start your subscription when you need a car</h3>
+              <p style={{ marginBottom: 0 }}>
+                Sign in, choose <strong>Start subscription</strong>, and book. All you
+                need is a debit or credit card, or Apple Pay. See the{' '}
+                <Link to="/membership#hire-charges">Frequent and Infrequent plans</Link>{' '}
+                for what a subscription costs.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p style={{ marginTop: '1.25rem', marginBottom: 0 }}>
+          Still not sure TECC is right for you?{' '}
+          <a href="mailto:tiltonelectriccarclub@gmail.com">Get in touch</a> — we&apos;re
+          happy to answer questions before you commit.
         </p>
       </div>
 

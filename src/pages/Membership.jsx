@@ -14,17 +14,18 @@ export default function Membership() {
         <p>There are three membership types:</p>
         <ul>
           <li><strong>Driver Member</strong> — hire the car yourself</li>
-          <li><strong>Need a Lift Member</strong> — for less mobile residents unable to drive – hire the car and get a volunteer to drive</li>
+          <li><strong>Need a Lift Member</strong> — for less mobile residents unable to drive — hire the car and get a volunteer to drive</li>
           <li style={{ marginBottom: 0 }}><strong>Volunteer Driver Member</strong> — drive less-mobile members; membership is <strong>free of charge</strong>*</li>
         </ul>
         <p className="footnote">
-          * a volunteer driver must subscribe if they also wish to use the cars for personal use
+          * Should a volunteer driver wish to use the cars for personal use they
+          will need to subscribe.
         </p>
       </div>
 
       {/* ── Hire charges ──────────────────────────────────────────────────────── */}
-      <div className="card">
-        <h3 style={{ marginTop: 0 }}>Hire charges for Driver Members</h3>
+      <div className="card" id="hire-charges">
+        <h2>Hire charges for Driver Members</h2>
         <table className="pricing-table" role="table">
           <thead role="rowgroup">
             <tr role="row">
@@ -57,7 +58,23 @@ export default function Membership() {
         <p>
           According to the AA, using a TECC car works out far cheaper than running
           your own — whether it&apos;s owned or leased. The AA puts the cost of
-          running a car at £380 to £680 a month as a minimum.
+          running a car at £380 to £680 a month as a minimum. See the AA&apos;s own
+          figures for{' '}
+          <a
+            href="https://www.theaa.com/driving-advice/driving-costs/running-costs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            the running costs of car ownership
+          </a>{' '}
+          and{' '}
+          <a
+            href="https://www.theaa.com/car-leasing/leasing-guides/cost-of-running-a-car"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            the cost of running a leased car
+          </a>.
         </p>
         <ul style={{ marginBottom: 0 }}>
           <li><strong>Frequent driver:</strong> use of the cars on a daily or weekly frequency</li>
