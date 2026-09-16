@@ -39,8 +39,8 @@ export default function About() {
         <figure className="figure figure--inline" style={{ marginBottom: 0 }}>
           <img
             src={membersLcca}
-            width="320"
-            height="189"
+            width="1280"
+            height="958"
             loading="lazy"
             alt="TECC members and volunteers gathered with the two club cars at an awards event"
           />
