@@ -24,22 +24,16 @@ export default function NeedALift() {
         <h2>The Practicalities</h2>
         <ul>
           <li>
-            Please allow a <strong>minimum of 1 week's notice</strong> for your
-            request. If you haven't had your request confirmed 48 hours before
-            your journey, please assume that a volunteer is not available. Until
-            a booking is confirmed, you won't be charged.
-          </li>
-          <li>
-            If you have not managed to get a lift when you wanted it, it is always
-            worthwhile to reach out to the volunteers via the dedicated WhatsApp
-            group &ndash; peoples&apos; commitments can change or volunteers may
-            swap amongst themselves.
+            Please allow a <strong>minimum of 1 week&apos;s notice</strong> for
+            your request.
           </li>
           <li>
             To calculate the journey time, use an online route planner (such as
-            Google Maps) to find the approximate timing. When booking, add
-            additional time to allow the driver to check, collect and return
-            the cars and for traffic delays.
+            Google Maps) to find the approximate timing.
+          </li>
+          <li>
+            When booking, please add additional time to allow the driver to
+            check, collect and return the car, and for traffic delays.
           </li>
           <li>
             If your journey can be flexible in terms of time of day or date,
@@ -50,8 +44,16 @@ export default function NeedALift() {
             hours — <strong>8.30am to 10pm</strong>.
           </li>
           <li>
+            If your journey is getting close and no volunteer driver has
+            accepted yet, please reach out to the volunteers via the dedicated
+            WhatsApp group — people&apos;s commitments can change or volunteers
+            may swap amongst themselves.
+          </li>
+          <li>Until a booking is confirmed, you won&apos;t be charged.</li>
+          <li>
             All our volunteer drivers give their time freely, are{' '}
-            <strong>DBS checked</strong> and receive training.
+            <strong>DBS checked</strong>, and receive training including
+            safeguarding training.
           </li>
           <li>
             Children and young people under the age of 18 must be accompanied by

@@ -13,7 +13,8 @@ export default function Volunteer() {
         <p>
           Volunteer drivers take members to visit a friend or family member, to an
           important appointment, or to the train station. All volunteer drivers are{' '}
-          <strong>DBS checked</strong> and receive training before their first lift.
+          <strong>DBS checked</strong> and receive training, including safeguarding
+          training, before their first lift.
           Volunteer Driver membership is <strong>free of charge</strong> — see the
           other <Link to="/membership">membership types</Link>.
         </p>

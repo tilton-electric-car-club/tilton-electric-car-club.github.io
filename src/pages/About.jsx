@@ -23,7 +23,8 @@ export default function About() {
           The club is member-led: all members are invited to join the Steering
           Group, which coordinates servicing and MOTs, keeps the cars roadworthy,
           matches volunteer drivers with lift requests, ensures every volunteer
-          driver is DBS checked, and meets monthly to run the club and raise funds.
+          driver is DBS checked and safeguarding trained, and meets monthly to run
+          the club and raise funds.
         </p>
         <p>
           TECC aims to give every resident the benefits of a car without the costs

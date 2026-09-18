@@ -204,7 +204,8 @@ export default function Home() {
         <h2>Need a lift?</h2>
         <p>
           If getting around is difficult, the Need a Lift scheme connects you with a
-          DBS-checked volunteer driver. Request journeys to local towns, villages, or
+          DBS-checked, safeguarding-trained volunteer driver. Request journeys to
+          local towns, villages, or
           Leicester with at least a week&apos;s notice.
         </p>
         <Link to="/need-a-lift" className="btn-secondary">
