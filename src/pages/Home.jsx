@@ -213,6 +213,78 @@ export default function Home() {
         </Link>
       </div>
 
+      {/* ── How to support us ────────────────────────────────────────────────── */}
+      <div className="card" id="support">
+        <h2>How to support us</h2>
+        <p>
+          TECC is run by volunteers, for the village. There are three ways you can
+          help keep the cars on the road.
+        </p>
+
+        <h3>Make a donation</h3>
+        <p>Every pound goes back into running and maintaining the cars. As a guide:</p>
+        <ul>
+          <li>
+            <strong>£20</strong> could help towards servicing and repairs
+          </li>
+          <li>
+            <strong>£50</strong> could cover enrolling a new volunteer, including
+            their DBS check
+          </li>
+          <li>
+            <strong>£195</strong> is what it costs to tax one of our cars for a
+            whole year
+          </li>
+        </ul>
+        <p>To donate, or to ask how it works, get in touch:</p>
+        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '0.5rem', marginBottom: '1.5rem' }}>
+          <a href="mailto:tiltonelectriccarclub@gmail.com" className="btn-primary">
+            Ask about donating
+          </a>
+          <a href="tel:+447766446132" className="btn-secondary">
+            Text or call Simon
+          </a>
+        </div>
+
+        <h3>Give your time</h3>
+        <p>
+          You don&apos;t need to be a driver to help. We always need a hand with:
+        </p>
+        <ul>
+          <li>Washing the cars</li>
+          <li>Taking the cars for their MOT and servicing</li>
+          <li>Battery charger monitoring</li>
+        </ul>
+        <p>
+          Helpers need to be TECC members so they are covered by our insurance — but
+          membership is free for volunteers, with no subscription to pay. To offer a
+          hand, text or call Simon on{' '}
+          <a href="tel:+447766446132">07766&nbsp;446132</a>.
+        </p>
+
+        <h3>Become a volunteer driver</h3>
+        <p>
+          Drive members who are less mobile to appointments, to visit friends, or to
+          the train station. Volunteer drivers are DBS checked, receive training, and
+          pay no membership subscription.{' '}
+          <Link to="/volunteer">How to become a volunteer driver</Link>
+        </p>
+
+        {/* DRAFT — club to confirm: the source banner described TECC itself as a
+            "not-for-profit CBS (community business society)". CBS stands for
+            Community Benefit Society, and per About.jsx and the footer the society
+            is Tilton Green Community Projects Limited, which TECC operates under.
+            Using the site's existing approved wording until the club confirms. */}
+        <div className="callout">
+          <p>
+            TECC is not-for-profit. It is operated under Tilton Green Community
+            Projects Limited, a Community Benefit Society. All funds raised are used
+            solely to run and maintain the TECC cars — no profit is distributed to
+            any individual.
+          </p>
+        </div>
+      </div>
+
       {/* ── Quotes ───────────────────────────────────────────────────────────── */}
       {/* DRAFT — club to confirm: Selene's v1 sitemap sketch includes a member
           quotes/testimonials section here. Left out of the visible page until
