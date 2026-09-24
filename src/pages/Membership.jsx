@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import twoCars from '../assets/photo-two-cars-charger.jpg'
+import twoCars640 from '../assets/photo-two-cars-charger-640.jpg'
 
 export default function Membership() {
   return (
@@ -22,6 +24,20 @@ export default function Membership() {
           will need to subscribe.
         </p>
       </div>
+
+      <figure className="figure">
+        <img
+          src={twoCars}
+          srcSet={`${twoCars640} 640w, ${twoCars} 1106w`}
+          sizes="(max-width: 700px) 100vw, 852px"
+          width="1106"
+          height="737"
+          loading="lazy"
+          decoding="async"
+          alt="Both TECC cars, in green club livery, parked side by side at a charge point"
+        />
+        <figcaption>Both club cars at the charge point</figcaption>
+      </figure>
 
       {/* ── Hire charges ──────────────────────────────────────────────────────── */}
       <div className="card" id="hire-charges">

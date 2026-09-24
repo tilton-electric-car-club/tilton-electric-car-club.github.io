@@ -1,3 +1,8 @@
+import passengerDoor from '../assets/photo-passenger-door.jpg'
+import passengerDoor640 from '../assets/photo-passenger-door-640.jpg'
+import stripSummerRoad from '../assets/strip-summer-road.jpg'
+import PhotoStrip from '../components/PhotoStrip'
+
 export default function NeedALift() {
   return (
     <div className="page">
@@ -19,6 +24,20 @@ export default function NeedALift() {
           available should be easier to accommodate.
         </p>
       </div>
+
+      <figure className="figure">
+        <img
+          src={passengerDoor}
+          srcSet={`${passengerDoor640} 640w, ${passengerDoor} 1106w`}
+          sizes="(max-width: 700px) 100vw, 852px"
+          width="1106"
+          height="737"
+          loading="lazy"
+          decoding="async"
+          alt="The passenger door of a TECC car, in green livery reading Electric Car Club, Tilton on the Hill"
+        />
+        <figcaption>A club car in its green TECC livery</figcaption>
+      </figure>
 
       <div className="card">
         <h2>The Practicalities</h2>
@@ -75,6 +94,8 @@ export default function NeedALift() {
           the scheme develops, we aim to recruit more volunteer drivers.
         </p>
       </div>
+
+      <PhotoStrip src={stripSummerRoad} focus="30% 50%" />
 
       <div className="card">
         <h2>Request a Lift</h2>

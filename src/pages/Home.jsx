@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/tilton-dark.png'
 import carTecc from '../assets/car-tecc.jpg'
 import carTecc700 from '../assets/car-tecc-700.jpg'
+import stripOpenRoad from '../assets/strip-open-road.jpg'
+import PhotoStrip from '../components/PhotoStrip'
 
 /* Inline SVG icons — simple line style, consistent weight, brand colours via currentColor */
 function IconCar({ className }) {
@@ -198,6 +200,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <PhotoStrip src={stripOpenRoad} focus="22% 50%" />
 
       {/* ── Need a Lift ──────────────────────────────────────────────────────── */}
       <div className="card">

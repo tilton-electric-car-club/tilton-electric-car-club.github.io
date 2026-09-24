@@ -1,7 +1,12 @@
 import { Link } from 'react-router-dom'
 import charging from '../assets/charging.jpg'
 import membersLcca from '../assets/members-lcca-2024.jpg'
+import membersLcca680 from '../assets/members-lcca-2024-680.jpg'
 import carLivery from '../assets/car-livery.png'
+import hallCarSide from '../assets/photo-hall-car-side.jpg'
+import hallCarSide640 from '../assets/photo-hall-car-side-640.jpg'
+import stripTwoCarsHall from '../assets/strip-two-cars-hall.jpg'
+import PhotoStrip from '../components/PhotoStrip'
 
 export default function About() {
   return (
@@ -39,7 +44,9 @@ export default function About() {
         </p>
         <figure className="figure figure--inline" style={{ marginBottom: 0 }}>
           <img
-            src={membersLcca}
+            src={membersLcca680}
+            srcSet={`${membersLcca680} 680w, ${membersLcca} 1280w`}
+            sizes="340px"
             width="1280"
             height="958"
             loading="lazy"
@@ -72,6 +79,19 @@ export default function About() {
             polluting.
           </li>
         </ul>
+        <figure className="figure" style={{ marginBottom: 0 }}>
+          <img
+            src={hallCarSide}
+            srcSet={`${hallCarSide640} 640w, ${hallCarSide} 1106w`}
+            sizes="(max-width: 700px) 100vw, 800px"
+            width="1106"
+            height="737"
+            loading="lazy"
+            decoding="async"
+            alt="A TECC car in green club livery parked outside Tilton Village Hall"
+          />
+          <figcaption>One of the club cars at Tilton Village Hall</figcaption>
+        </figure>
       </div>
 
       {/* ── How it works ─────────────────────────────────────────────────────── */}
@@ -124,6 +144,8 @@ export default function About() {
           </div>
         </div>
       </div>
+
+      <PhotoStrip src={stripTwoCarsHall} focus="30% 50%" />
 
       {/* ── Accessibility & the cars ─────────────────────────────────────────── */}
       <div className="card" id="accessibility">

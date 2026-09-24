@@ -747,6 +747,35 @@ img { max-width: 100%; height: auto; }
   margin: 0 auto 1.25rem;
 }
 
+/* ── Photo strips ─────────────────────────────────────────────────────────────────
+   Trev's panoramic strip shots (PhotoStrip.jsx). They break out of the 900px
+   column to the navbar's 1100px (full-bleed on smaller screens), and the top
+   edge is cut to the hero's hill contour: HillHorizon's front ridge from
+   Home.jsx, compressed to 18% of the strip's height. Browsers without mask
+   support show a plain rectangle. */
+#main-content {
+  overflow-x: clip; /* 100vw includes the scrollbar on Windows */
+}
+.photo-strip {
+  margin: 0 calc(50% - min(50vw, 550px)) 1.25rem;
+}
+.photo-strip img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1106 / 202;
+  object-fit: cover;
+  object-position: var(--focus, 50% 50%);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 164' preserveAspectRatio='none'%3E%3Cpath d='M0,164 L0,30 C60,29.1 110,21.4 180,15 C240,9.4 290,7.7 340,8.6 C390,9.4 420,13.7 460,16.3 C510,19.3 560,22.3 620,19.3 C670,16.7 720,8.6 780,4.3 C820,1.3 860,0 900,0.9 L900,164 Z'/%3E%3C/svg%3E") 0 0 / 100% 100% no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 164' preserveAspectRatio='none'%3E%3Cpath d='M0,164 L0,30 C60,29.1 110,21.4 180,15 C240,9.4 290,7.7 340,8.6 C390,9.4 420,13.7 460,16.3 C510,19.3 560,22.3 620,19.3 C670,16.7 720,8.6 780,4.3 C820,1.3 860,0 900,0.9 L900,164 Z'/%3E%3C/svg%3E") 0 0 / 100% 100% no-repeat;
+}
+/* At 5.5:1 a phone-width strip is ~65px tall; crop it taller around the car */
+@media (max-width: 700px) {
+  .photo-strip img {
+    aspect-ratio: 5 / 2;
+  }
+}
+
 /* ── Responsive ─────────────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .page {

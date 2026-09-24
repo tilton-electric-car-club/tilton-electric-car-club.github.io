@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import laneAutumn from '../assets/photo-lane-autumn.jpg'
+import laneAutumn640 from '../assets/photo-lane-autumn-640.jpg'
 
 export default function Volunteer() {
   return (
@@ -7,6 +9,20 @@ export default function Volunteer() {
       <p className="subtitle">
         Give your time to help less mobile neighbours get around.
       </p>
+
+      <figure className="figure">
+        <img
+          src={laneAutumn}
+          srcSet={`${laneAutumn640} 640w, ${laneAutumn} 1106w`}
+          sizes="(max-width: 700px) 100vw, 852px"
+          width="1106"
+          height="622"
+          loading="lazy"
+          decoding="async"
+          alt="A TECC car in green club livery on a quiet country lane lined with trees"
+        />
+        <figcaption>A club car out on a local lane</figcaption>
+      </figure>
 
       <div className="card" id="volunteer">
         <h2>Become a volunteer driver</h2>

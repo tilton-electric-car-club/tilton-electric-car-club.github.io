@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom'
 
+import noticeboard from '../assets/photo-noticeboard.jpg'
+import noticeboard640 from '../assets/photo-noticeboard-640.jpg'
+
 const BOOKING_URL = 'https://tiltonelectriccarclub.com'
 
 export default function Join() {
@@ -105,6 +108,19 @@ export default function Join() {
           vehicles, or a one-off trip where a hire car or taxi would cost more. TECC
           calls this being <strong>Ready to Go</strong>.
         </p>
+        <figure className="figure">
+          <img
+            src={noticeboard}
+            srcSet={`${noticeboard640} 640w, ${noticeboard} 1106w`}
+            sizes="(max-width: 700px) 100vw, 800px"
+            width="1106"
+            height="737"
+            loading="lazy"
+            decoding="async"
+            alt="The TECC noticeboard on the village hall wall, with a Ready to Go poster and a box of club leaflets"
+          />
+          <figcaption>The club noticeboard at the village hall, with the Ready to Go poster and leaflets</figcaption>
+        </figure>
         <div className="steps">
           <div className="step">
             <div className="step-number" aria-hidden="true">1</div>
